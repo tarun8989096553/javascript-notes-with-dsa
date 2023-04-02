@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// let vl;
+//         if (vl === undefined || vl === null) {                       👿 here itnei condition lagane se achha  !!!vl ek baar me check kr lo ki value hai ki nahi hai
+//             console.log("Variable is not declared");
+//         } else {
+//             console.log("Variable is declared");
+//         }
+
+
+
+        // let vl;
+        // if (!!!vl) {                    // 👍 here first naegation opertor(!) undefined to true then true to false then false to true why becuse last nagation operture is not true first case not work becuse it need true for these
+        //     console.log("Variable is not declared");
+        // } else {
+        //     console.log("Variable is declared");
+        // }
+
+
+//===============================================================================================================================
+
+//2020 update
+                                                 //  called nested object
+const  kale={
+            name:"tarun",
+            fathername:{
+                 name:"padurangkale",
+                  wife:{
+                         wifename:"sangetakale"
+                  }
+            }
+}
+                                              
+ //now                                        //but 
+ if(kale && kale.fathername && kale.fathername.wife && kale.fathername.wife.wifename)// hai kya hai if chata kya hai actually yeh check kr rha hai object me exit hai ki ki nahi means true hai hai ki nahi kale true  kale.fathername true  hai enme path kuch aur likhta to nahi chl patha
+// 👍  yeh condition headack hai  bhut badi condition likhi 
+
+ {
+  console.log( kale.fathername.wife.wifename)           // it print sangeetakale
+ }
+
+// direct ways is
+
+console.log(kale?.fathername?.name) // it  print pandurang kale  without if checking
+console.log(kale?.fathername?.wife?.wifename) //  it print sangeetakale kale  without if checking
+// by default kale ke badle  kuch likhta error deta but kale ke baad father name  nahi likhta kuch aur luikhta to undefine deta 
+
+
+console.log( kale.fathername.wife.wifename) // vese bhi direct likke print hota but testing krte hsai tabh if condition se bach jayege
+    </script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // // 5️⃣ Hoisting in JavaScript 
+
+// // we have a creation phase and execution phase.
+
+// // Hoisting in Javascript is a mechanism where variables and functions
+// // declarations are moved to the top of their scope(means consol.log bracket) before the code execute.
+
+// For Example 👇
+// console.log(myName);  
+
+// let myName;
+// myName = "thapa";
+
+// // How it will be in output during creation phase 
+
+// 1: var myName = undefined;
+// 2: console.log(myName);
+// 3: myName = "thapa";
+
+
+             // my way tarikha 
+              kya hai yeh hoisting ek Process before es6 se phele use kerte to undefine result deta tha
+                
+            hoisting phele apne hisabh se code ke under create then excute krta hai jese varivle ka name and  print means bracket console.logwala
+
+             esa mene code likha 
+          // console.log(myName);  
+
+// var myName;
+// myName = "thapa";
+                     esa apna app create hua in machine me in creation mode and excute hua
+// 1: var myName 
+// 2: console.log(myName);
+// 3: myName = "thapa";
+
+        and it print undefined
+
+        bss aur kuch nahhi hai
+
+        but after es6 ke baad let and const use kerte hai to it give error why becuse first decaalre kr then print  by using let and const
+           and abh hoisting is avoided by let cand const keyword
+
+
+// // 6️⃣ What is Scope Chain and Lexical Scoping in JavaScript? 
+
+// // The scope chain is used to resolve the value of variable names 
+// // in JS.
+
+         scope chain manjeeee  data (varaiable declare krana ) called scope chain
+          
+         var name='tarun'   called scope chain
+
+// // scope chain in js is lexically defined, which means that we can 
+// // see what the scope chain will be by looking at the code. 
+
+// // At the top, we have the Global Scope, which is the window Object
+// // in the browser.
+
+// // Lexical Scoping means Now, the inner function can get access to 
+// // their parent functions variables But the vice-versa is not true.
+
+
+
+
+         ABH DEKH LEXICAL MEANS ARRE KUCH NAHI HAI   BSS  kya hota hai
+          
+         app inner fuction jo varible  usko call krte to outer function ko  but uska vice verasa not posiible called lexical scoping
+
+
+here example  second fun vo acces kr sakta ahi a,b ko and obviously c ko called lexical scoping
+
+
+
+// // For Example 👇
+
+let a ="hello "
+ const firstfun=()=>{                    
+       let b="tarun "                  //  here firstfun ko declare vo dekhega ki ki call kiya kiya ki nahi here call kiya  to                                   then  go inside     lexical scoping means  without using this ,apan direct a,b,c ko acces kr skte hai
+       firstfun()
+       const secondfun=()=>{
+         let c="kale"
+         console.log(a+b+c)                
+       }
+         secondfun()
+ }
+firstfun()
+ 
+
+======================================
+         // if i want acces from outside function means like secondfun() call
+
+         et a ="hello "
+ 
+ const firstfun=()=>{
+       let b="tarun "
+       const secondfun=()=>{
+         let c="kale"
+     
+       }
+         secondfun()
+         
+         console.log(a+b+c)           // ERROR GIVE   MEANS LEXXCAL SCOPE NOT WORK OUTSIDE TO INSIDE 
+ }
+
+ firstfun()
+
+
+                               // CLOSURE DEKHNA KHAI AUR SE ACHEEB SEE
+
+
+============================================================================================================================================================================================================================================
+
+ 
+  what is sync and async ?
+       ans  sync is like that  STEP BY STEP WORK JAB TK EK KAAM COMPLETE NAHI HOGA TAB TAK OTHER KAAM START NAAHI HOGA 
+
+       ANYNC MULTIPLE KAAM EK SATH  EK KAAM NE TIME LE LIYA COMPLETE HONE KE LIYE TO MEANS COMPLETE NAHI TO USKE BADLE DUSRA KAMM KEREGA GA
+
+
+
+EXAMPEL 
+
+         SYNC
+
+         fun2 =()=>{
+               console.log("hello 2️⃣")
+         }
+
+         fun1=()=>{
+            console.log("hello 1️⃣ ")
+            fun2()
+            console.log("hell0 1️⃣")
+         }
+
+
+    fun1()
+
+
+    example of async
+
+    fun2 =()=>{
+      setTimeout(()=>{  console.log("hello 2️⃣")},2000)
+             
+         }
+
+         fun1=()=>{
+            console.log("hello 1️⃣ ")
+            fun2()
+            console.log("hell0 1️⃣")
+         }
+
+
+    fun1()
+
+                                                                         ?????? event loop and closure samcha na fir se and dom, bom
+
+
+
+
+
+    </script>
+</body>
+</html>

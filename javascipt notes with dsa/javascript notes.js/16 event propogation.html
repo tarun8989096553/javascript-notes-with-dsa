@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+                    <!-- <h1> event propagation ?</h1>
+                    <p>  the event propagation mode determine in which  order  the element  recive the event</p>
+
+                      bottom to top called bubbling phase(bubble inc)  by default we use bubblinfg always
+                       explanation  first fire 
+
+                       
+                                 or better example below 
+
+           (konsa method call)  event  target  ===>       buution ==> div ==>  body==>  html ==>  document ==>  window
+                      
+                      
+                      
+                      and top to bootom called capturing phase
+
+                     
+
+                      
+                       or 
+    (konsa method call)event  target  <===   buution <== div  <==  body <==   html  <==   document <==  window -->
+
+    <div style="border: 1px solid black; padding: 10px;height: 300px; width: 300px;margin-left: 600px;background-color: blue" id="tarun">
+        <div style="border: 1px solid red; padding: 10px;height: 200px;width: 200px;background-color: red;" id="kale"></div>
+      </div>
+      
+
+  <div>
+
+  </div>
+  
+
+
+
+
+
+
+ <script>
+//       const parentid =document.getElementById("tarun")
+//       const childid =document.getElementById("kale")
+
+
+//       const child=()=>{
+//          alert('you called child ')                  // 👿 child calle dbubbling   and another ki yeh sabh me by defult bubbling call ho rah hai
+    
+       
+//       }
+//       const parent=()=>{
+//          alert('you called parent ')                   // 👿 child calle capturing
+       
+//       }
+ 
+//       childid.addEventListener('click',child)                 
+
+//    parentid.addEventListener('click',parent)
+
+
+                                                                   //  part 2 abh chatu hu ki bubbling naa ho 
+
+//       const parentid =document.getElementById("tarun")
+//       const childid =document.getElementById("kale")
+
+
+//       const child=()=>{
+//          alert('you called child ')               
+//event.stopPropagation()              // yeh bubbling proces ko off krrta hi  only child called hoga not parnt
+    
+       
+//       }
+//       const parent=()=>{
+//          alert('you called parent ')                   // 👿 child calle capturing
+       
+//       }
+ 
+//       childid.addEventListener('click',child)                 
+
+//    parentid.addEventListener('click',parent)
+
+                                                                    // part 3  true false inside add event lisnter (false (by defult bubbling) and  true (caputing)) this is third argument  true and false in addevent listner
+
+      const parentid =document.getElementById("tarun")
+      const childid =document.getElementById("kale")
+
+
+      const child=()=>{
+         alert('you called child ')               
+           // yeh bubbling proces ko off krrta hi  only child called hoga not parnt
+    
+       
+      }
+      const parent=()=>{
+         alert('you called parent ')                   // 👿 child calle capturing
+       
+      }
+ 
+      childid.addEventListener('click',child,true)         
+
+   parentid.addEventListener('click',parent,true)
+
+ //both          ture called capturing top to bottom hota kya ki inside tu buttion click kerega  parent call then child
+ // outside  side buttion dabiye  only called  parent 
+
+ //both          fasle called bubbing bottom to top  hota kya ki inside tu buttion click kerega  child then parent (by defult)
+ // outside  side buttion dabiye  only called  parent 
+
+
+
+
+
+
+
+
+
+
+
+ </script>
+
+                      
+
+</body>
+</html>

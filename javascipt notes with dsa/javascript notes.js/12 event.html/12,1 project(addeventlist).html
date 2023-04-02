@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="display: flex; flex-direction: column;">
+        <div style="background-color: red; height: 100px; width:200px" onclick="alert(`i am awsome but no one use me`)">simple inline alert()</div>
+        <div style="background-color: blue; height: 100px;width:200px" onclick="call()" >our method  (calling function)</div>
+        <h1 style="text-align: center ;" id="tarun">  </h1>
+        <div style="background-color: green; height: 100px;width:200px" id="thirdway">third way</div>
+        <div style="background-color: yellow; height: 100px;width:200px" id="fourthway">addevent listner</div>
+      </div>
+      
+    <script>
+
+                const call=()=>{
+                    document.getElementById("tarun").innerHTML="जेसे बटन क्लिक होगा वेसा कॉल फंक्शन"
+               //     alert("hello")
+                }
+
+                // we do id acess 
+
+        const ok=document.getElementById("thirdway")                            // not use value
+
+        ok.onclick=()=>{
+               alert ("hello this the third way")
+        }
+         //  🔓 here we check same time pe clik hone pr console aand alert kaam krta hai ki nahi
+        ok.onclick=()=>{
+               console.log ("hello this the third way")
+        }
+                       
+        const fourthway=document.getElementById("fourthway")
+
+        // we use add event lisner
+      //  some.addEventListener('event',function,bubling or capturing)    // it fire three argument first event ,2 function or callback function  (function ke under function pass krna) ,3 option me bubbling or capturing  
+      //  event here onclik ke badle click likhte hai 
+      //   👿 👿  here imp onclik ko click (means `on` remove) same onchange (change)
+
+         //  🔓 here we check same time pe clik hone pr console aand alert kaam krta hai ki nahi
+      fourthway.addEventListener('click',()=>{
+            alert('i love this way')
+      })
+      fourthway.addEventListener('click',()=>{
+            console.log('i love this way')
+      })
+
+      // here we see that addeventlistner work both side
+      
+                   // interview 
+                   // onclik vs addevent listner   
+                   //  kyu onclik pe only console chala 
+                   // this is because addEventListner doesnot overwrite eisting event handlers, wheras onclik overide any existing onclik =fn event handler
+
+    </script>
+</body>
+</html>

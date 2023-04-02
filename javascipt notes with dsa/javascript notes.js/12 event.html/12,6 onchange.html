@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<label for=""  style="text-align: center;">your name 🤞</label>
+<input type="text"  name="" id="ice" style="text-align: center;">
+<br>
+<label >
+    <select name="icecream" id="icecream">
+        <option value=""></option>
+        <option value="vanilla"> vanilaa</option>
+        <option value="chocoalte"> chocaolate</option>
+        <option value="sardine">sardine</option>
+
+    </select>
+
+
+
+</label>
+                            <h1 id="write" style="text-align: center;text-transform: capitalize;"></h1>
+
+    <script>
+
+// addeventlistner  ` on` is remove
+
+const deeapk=document.getElementById("icecream")     // 👿 why we use value  (in case from element jo likhke ke yaa option me choose krekke kya bhej te hai hai vo vlaue hoty ahi ) but vo bhi under  function ke value use hoty ahi below and kisko use krana  here id icereame wale ko use why kuki  me chata hu ki jese vo option ko selct kare vese hi data print ho (show) 
+
+
+deeapk.addEventListener('change',()=>{                  // 👿 oncahge kea matlab hai ki jabhi data ko get and dispaly krna
+    const sh=document.getElementById('ice').value
+    const s=document.getElementById('icecream').value
+
+    document.getElementById('write').innerHTML=`${sh} and ${s}`
+    
+
+})                                                                            // here callback function is an argument here means
+ 
+//or
+
+// const ok=()=>{
+
+// }
+//   tarun.addeventlistener('onchange',ok)
+
+
+
+    </script>
+</body>
+</html>

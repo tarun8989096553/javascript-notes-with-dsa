@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 4️⃣ Destructuring in ES6
+// The destructuring assignment syntax is a JavaScript expression 
+// that makes it possible to unpack values from arrays, 
+// or properties from objects, into distinct variables.
+
+  //  ➡ Array Destructuring  🏁
+
+  // const myBioData = ['vinod', 'thapa', 26];
+
+  // let myFName = myBioData[0];
+  // let myLName = myBioData[1];
+  // let myAge = myBioData[2];
+
+  console.log(myFname)
+  or
+  
+  below wala hai jo hai vo only array destruing not related let myFname varible kuch bana sakte hai but length same honi chaiuye
+  hua kya yeah pe dekh bss kuch nahi bss  mybiodata ki position  arrayse intercahnge kr di abh esily print ke liye apply krte hai
+
+// let [myFName,myAge, myLName] = myBioData;
+// console.log(myAge);
+
+  // we can add values too 
+  
+  // let [myFName,myLName,myAge, myDegree="MCS"] = myBioData;
+  // console.log(myDegree);
+
+
+
+  // ➡ Object destructuring 🏁
+  // const myBioData = {
+  //   myFname : 'vinod',
+  //   myLname : 'thapa',
+  //   myAge : 26
+  // }
+
+  // let age = myBioData.age;
+  // let myFname = myBioData.myFname;
+
+             or
+  // let {myFname,myLname,myAge, myDegree="MCS"} = myBioData;
+  // console.log(myLname);
+
+
+
+
+
+// 5️⃣ Object Properties 
+
+// ➡ we can now use Dynamic Properties 
+  ARRE BHAI SABH YEH KAAM KA  REACT E ME CURD OPERTION DATA KO  (DATA KAA VARIBLE NAME SAME RAHETA USKE UNDER KA DATA ADD 
+  KERNA )
+
+  EXAMPLE 
+  OBJECT KE BHAR 
+    MYNAME =VINODE 
+    AND  
+    OBJECT KE UNDER  
+    MYNAME=TARUNKALE
+
+    ME KYA CAHTA HU MYNAME VINODE KE SATH  TARUN ADD HO JYAEGA CALLED DYNAMIC  PROPERTIES
+    WE USE SQUARE BRACKET INSIDE OBJECT  TO USE DYNAMIC PROPERTIES
+    [MYNAME]:TARUN
+
+    HERE SEE THIS STUFF
+
+
+      // let myName = "vinod";
+      // const myBio = {
+      //   [myName] : "hello how are you?",         IT PRINT THIS       {26: 'is my age', vinod: 'hello how are you?'}   HERE VINOD AA GAYA
+      //   [20 + 6] : "is my age"   // math ki properties add, sub, mult all this we can apply this in square braCket
+      // }
+
+      // console.log(myBio);
+
+  // ➡ no need to write key and value, if both are same 
+  EXMPALE 
+  CONST TAUN={
+    OK:OK,
+    LETS:LETS  // HERE KEY AND VALUE BOTH SAME TO APP OBJECT DESTRUCING KR SAAKETE JESE NICHE KESE SEE BELOW
+  }
+
+   // above example not realted this 
+
+  let myName = "vinod thapa";
+  let myAge = 26;
+
+  
+  const myBio={
+    myName:myName, // kuch cases me krana padta hai but yeh eror nahi deta hai mynNmae ="vinod thapa" to object me key me chala jayega jo (myName) ke      naam  me hai  esse bhetar niche after es6
+    myAge:myAge
+  }
+
+  es6 object destruing and it automatic figure out krta hai
+
+   after es6
+  const myBio = {myName,myAge}
+
+  console.log(myBio);
+
+
+// 7️⃣Spread Operator
+
+// const colors = ['red', 'green', 'blue', 'white', 'pink'];
+
+// const myColors = ['red', 'green', 'blue', 'white','pink', 'yellow', 'black'];
+// // // 2nd time add one more color on top and tell we need to write it again 
+// // // on myColor array too 
+
+// const MyFavColors = [ ...colors, 'yellow', 'black'];
+
+// console.log(MyFavColors);
+  
+//on object form me spread opertor
+
+// const person = { name: 'Fred', age: 87, degree : "mcs" };
+// const sPerson = { ...person };
+
+// console.log(person);
+// console.log(sPerson);
+
+
+
+// ES7 features 
+
+// 1: array include 
+// const colors = ['red', 'green', 'blue', 'white', 'pink'];
+// const isPresent = colors.includes('purple');
+// console.log(isPresent);
+
+// 2: **
+// console.log(2**3); 
+
+
+
+// ES8 Features 
+
+// String padding
+// Object.values()   👿
+// Object.entries()  👿
+
+// const message = "my name is vinod";
+// console.log(message);
+// console.log(message.padStart(5));
+// console.log(message.padEnd(10));
+
+
+// const person = { name: 'Fred', age: 87 };
+
+// // // console.log( Object.values(person) );   // it work as loop here it print only value
+// const arrObj =  Object.entries(person);    // it works as key pair for me  example ['name' ,'fred'] ,  ['age',87] it print like individual array key and value form
+// console.log(Object.fromEntries(arrObj));
+
+
+
+// ES2018
+
+// const person = { name: 'Fred', age: 87, degree : "mcs" };
+// const sPerson = { ...person };
+
+// console.log(person);
+// console.log(sPerson);
+
+
+// ES2019
+// Array.prototype.{flat,flatMap}
+// Object.fromEntries()
+
+// ES2020
+// #1: BigInt
+
+// let oldNum = Number.MAX_SAFE_INTEGER;
+// // console.log(oldNum);
+// // console.log( 9007199254740991n + 12n );
+// const newNum = 9007199254740991n + 12n;
+
+// console.log(newNum);
+// console.log(typeof newNum);
+
+
+// const foo = null ?? 'default string';
+// console.log(foo);
+
+
+// "use strict";
+
+// x = 3.14;  === here we dont use let var const so strinct mode give error it follow traditional way
+// console.log(x);
+
+   here we see that strict mode error catch easliy means traditional follow krta hai kese here i dont use let ,const ,var let 
+
+   
+
+
+  
+  
+
+    </script>
+</body>
+</html>

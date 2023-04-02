@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .stopwatch {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .display {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        button {
+            font-size: 1.2rem;
+            padding: 0.5rem 1rem;
+            margin-right: 0.5rem;
+        }
+
+        .start {
+            background-color: green;
+            color: white;
+        }
+
+        .stop {
+            background-color: red;
+            color: white;
+        }
+
+        .reset {
+            background-color: gray;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="stopwatch">
+        <div class="display" id="display">00:00:00</div>
+        <button class="start" id="start">Start</button>
+        <button class="stop" id="stop">Stop</button>
+
+    </div>
+    <script>
+
+        let start = document.getElementById("start")
+        let stop = document.getElementById("stop")
+        let stpref;
+
+
+        start.addEventListener("click", () => {
+
+        stpref= setInterval(() => {
+                let time = new Date().toLocaleTimeString()
+                document.getElementById("display").innerHTML = `${time}`
+            }, 1000)
+        })
+
+        stop.addEventListener("click", () => {
+            clearInterval(stpref)
+        })
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,714 @@
+JavaScript Example
+ 
+Within body tag
+
+Within head tag
+
+Javascript example is easy to code. JavaScript provides 3 places to put the JavaScript code: within body tag, within head tag and external JavaScript file.
+
+Let’s create the first JavaScript example.
+
+<html>  
+<body>  
+<script type="text/javascript">  
+document.write("JavaScript is a simple language for shiva concept soulation learners");  
+</script>  
+</body>  
+</html>  
+
+                                    👿 imp here we  can use two script tag jo phela likha hai vo ohele aryega  jo script last me likhui hai vo last me and h1 ko bhi fark nahi padega it doesnot destroy h1 
+<html>
+<head>
+    <script>
+       document.write("hello tarunn")
+    </script>
+</head>
+ <body>
+    <h1> hello tarun akel</h1>
+
+    <script>
+        document.write("hello tarun kael")
+    </script>
+ </body>
+</html>
+
+                                                  👍 👿 imp what is document.write
+                                               
+                                 
+               -------------------------------  BUT AFTER UPDATE CHROME 54  ◀️ 
+
+               We know that Chrome version 54 doesn’t execute document.write commands. Paul Kinlan, who first announced this through Developers.google.com, made it clear:
+               The reason why such commands, which gave various error notifications in the 53rd version of Chrome, were not executed as soon as the update took place (he talk about Chrome 54 Update here), mainly because they cause poor network connection and negatively affect the user experience due to the slow loading process.
+
+               HUME PATA HAI KI   Document.WRITE  FILE NEW PAGE KHULTI HAI  JAB KOI FUNCTION CALL HOTA HAI  AUGER BADI DYNAMIC WEBSITE 
+                FUNCTION CALL KRNE KE TIME LOAD LEGY WEBSITE
+
+
+                Pages that are delayed to load or do not load due to an extremely poor network connection
+The script that is not in the browser cache may have activities that prevent the parser from running.
+Command is added to the highest level document.
+
+
+
+   script tag specifies that we are using JavaScript.
+
+The text/javascript is the content type that provides information to the browser about the data.
+
+The document.write() function is used to display dynamic content through JavaScript. We will learn about document object in detail later.
+
+3 Places to put JavaScript code
+1)Between the body tag of html <script>
+2)Between the head tag of html <script>
+3)In .js file (external javaScript)
+
+1) JavaScript Example : code between the body tag
+In the above example, we have displayed the dynamic content using JavaScript. Let’s see the simple example of JavaScript that displays alert dialog box.
+
+
+<html>  
+<body>  
+<script type="text/javascript">  
+ alert("Helloshiva concept soulation");  
+</script>  
+</body>  
+</html>  
+
+ 2) JavaScript Example : code between the head tag
+Let’s see the same example of displaying alert dialog box of JavaScript that is contained inside the head tag.
+
+In this example, we are creating a function msg(). To create function in JavaScript, you need to write function with function_name as given below.
+
+To call function, you need to work on event. Here we are using onclick event to call msg() function.
+
+<html>  
+<head>  
+<script type="text/javascript">  
+function test(){  
+ alert("Hello   shiva concept soulation");  
+}  
+</script>  
+</head>  
+<body>  
+<p>Welcome to Javascript</p>  
+<form>  
+<input type="button" value="click" onclick="test()"/>  
+</form>  
+</body>  
+</html>  
+
+<html>  
+<head>  
+<script type="text/javascript">  
+function add(){  
+var a,b,c;
+a=parseInt(prompt("Enter 1st no"))
+b=parseInt(prompt("Enter 2nd no"))
+c=a+b;
+alert("Sum"+c)
+}  
+</script>  
+</head>  
+<body>  
+<font color="red"size="20">
+<p>Welcome to Javascript</p>  
+<form>  
+<input type="button" value="click" onclick="add()"/>  
+</form>  
+</body>  
+</html>  
+
+ External JavaScript file
+We can create external JavaScript file and embed it in many html page.
+
+It provides code re usability because single JavaScript file can be used in several html pages.
+
+An external JavaScript file must be saved by .js extension. It is recommended to embed all JavaScript files into a single file. It increases the speed of the webpage.
+
+Let's create an external JavaScript file that prints Helloshiva concept soulation in a alert dialog box
+----------------------------------------------------------------------
+test.js
+----------------------------------------------------------------------
+function fun(){  
+ alert("Helloshiva concept soulation");  
+}  
+-----------------------------------------------------------------------
+
+
+Let's include the JavaScript file into html page. It calls the JavaScript function on button click.
+index.html
+
+<html>  
+<head>  
+<script type="text/javascript" src="test.js"></script>  
+</head>  
+<body>  
+<p>Welcome to JavaScript</p>  
+<form>  
+<input type="button" value="click" onclick="fun()"/>  
+</form>  
+</body>  
+</html>  
+Javascript Architecture:-
+
+DOM (Document Object Model):-
+
+
+Javascript provides a separate window with a document to contain and access all Html elements.
+Javascript can provide accessibility to all HTML elements.
+
+
+
+
+
+
+If we want to access an HTML element using javascript then we can use two different syntax
+
+
+1) document.getElementById("idname").attribute
+
+
+
+2) document.getElementByName("elementname").attribute
+
+
+
+<input type="text" id="t1"  />
+
+
+a=document.getElementById("t1").value;
+
+
+ 👿 ⏬  ump hai
+
+
+We can write Javascript under HTML document because without HTML document JS has no role.
+
+     <script>
+     document.write("Welcome in JS");
+     alert("welcom in JS");
+    </script>
+
+note:-  if we write JAVASCRIPT internally then we should define it under the <head> section.
+
+Complete Code with HTML and JS?
+
+<!DOCTYPE html>
+<html>
+<head>
+ <title></title>
+    <script>
+     document.write("Welcome in JS");
+
+     Console.log(“Welcome in js”);
+     alert("welcom in JS");
+    </script>
+
+</head>
+<body>
+<p>Welcome in HTML</p>
+</body>
+
+
+</html>
+
+
+
+How we declare a variable in Javascript?
+
+we can directly declare a variable in JS without using datatype because JS is a loosely coupled script.
+
+
+
+Sure! Here is an example to illustrate how JavaScript is a loosely coupled script:
+
+javascript
+Copy code
+var myVariable = 10; // declaring a variable and assigning a numeric value
+console.log(myVariable); // output: 10
+
+myVariable = "Hello, world!"; // reassigning the variable with a string value
+console.log(myVariable); // output: Hello, world!
+
+myVariable = true; // reassigning the variable with a boolean value
+console.log(myVariable); // output: true
+In this example, we declare a variable myVariable and assign it a numeric value of 10. We then reassign the variable with a string value of "Hello, world!", and finally with a boolean value of true. JavaScript allows us to do 
+this without having to declare the variable's data type explicitly. The variable's type is determined dynamically based on the data assigned to it at runtime.
+
+This is an example of how JavaScript is a loosely coupled script, as it allows us to change the type of data stored in a variable without having to explicitly declare the variable's data type or modify its definition.
+
+
+other language is tight coupling i dont  example
+
+Syntax:-
+
+identifier=value
+
+
+<!DOCTYPE html>
+<html>
+<head>
+ <title></title>
+ <script type="text/javascript">
+  a=100;
+  b=200;
+  c=a+b;
+  document.write("<h1>"+ c +"</h1>");
+
+ </script>
+</head>
+<body>
+
+
+</body>
+</html>
+
+
+
+<html>
+
+<head>
+
+ <title></title>
+
+ <script type="text/javascript">
+
+   var a,b,c;
+                                                                    // parse=====> cosnvert  bydefulat   varible input diya to output mujhe NAN dega  beacuse it want number
+  a=parseInt(prompt("Enter 1st no"));
+
+  b=parseInt(prompt("Enter 2nd no"));
+
+  c=a+b;
+
+document.write("<h1>"+ c +"</h1>");
+
+ 
+
+ </script>
+
+</head>
+
+<body>
+
+ 
+
+ 
+
+</body>
+
+</html>
+
+<html>
+
+<head>
+
+ <title></title>
+
+ <script type="text/javascript">
+
+  var p,r,t,si,
+
+ 
+
+  p=parseInt(prompt("Enter principle "));
+
+  r=parseInt(prompt("Enter rate"));
+
+  t=parseInt(prompt("Enter time "))
+
+  si=(p*r*t)/100;
+
+document.write("<h1>"+"Simple Intrest : "+si+"</h1>");
+
+ 
+ 
+
+ 
+
+</body>
+
+</html>
+
+
+😃  calculator
+
+
+<html>
+<head>
+  
+</head>
+ <body>
+
+              <input type="text" value="" id="tarun">
+              <br><br><br>
+              <input type="text" value="" id="ok">
+              <br><br><br>
+              <button onclick="sum()"> clik sum</button>
+              <br>
+              
+              <button onclick="minus()"> clik minus</button>
+              <br>
+              <button onclick="multi()"> clik multi</button>
+              <br>
+              <button onclick="div()"> clik div</button>
+              <br>
+              <h1 id="here" style="color: red;font-family: 'Courier New', Courier, monospace;"></h1>
+              <br>
+
+   <script>
+ 
+     const sum=()=>{
+      a=parseInt(document.getElementById('tarun').value)
+                         b=parseInt(document.getElementById('ok').value)
+                 
+                   document.getElementById("here").innerHTML=a+b        
+
+     }
+     const minus=()=>{
+                         a=parseInt(document.getElementById('tarun').value)
+                         b=parseInt(document.getElementById('ok').value)
+                 
+                   document.getElementById("here").innerHTML=a-b        
+
+     }
+     const multi=()=>{
+                         a=parseInt(document.getElementById('tarun').value)
+                         b=parseInt(document.getElementById('ok').value)
+                 
+                   document.getElementById("here").innerHTML=a*b        
+
+     }
+     const div=()=>{
+                         a=parseInt(document.getElementById('tarun').value)
+                         b=parseInt(document.getElementById('ok').value)
+                 
+                   document.getElementById("here").innerHTML=a/b        
+
+     }
+
+
+
+
+l
+
+
+
+
+   </script>
+    
+    
+
+ </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+
+<head>
+
+ <title></title>
+
+ <script type="text/javascript">
+
+  var l,b,a,p;
+
+ 
+
+l=parseInt(prompt("Enter length "));
+
+b=parseInt(prompt("Enter breadth"));
+
+  a=l*b;
+
+  p=2*(l+b);
+
+document.write("<h1>"+"Area : "+a+"</h1>");
+
+document.write("<h1>"+"Perimeter: "+p+"</h1>");
+
+ </script>
+
+</head>
+
+<body>
+
+ 
+
+ 
+
+</body>
+
+</html>
+
+<html>
+
+<head>
+
+ <title></title>
+
+ <script type="text/javascript">
+
+  var p,c,m,tot,per; 
+
+p=parseInt(prompt("Enter physics marks "));
+
+c=parseInt(prompt("Enter che marks"));
+
+m=parseInt(prompt("Enter mat marks"));
+
+tot=p+c+m;
+
+per=tot/3; 
+
+document.write("<h1>"+"total : "+tot+"</h1>");
+
+document.write("<h1>"+"Percentage: "+per+"</h1>");
+
+ 
+
+ 
+
+ </script>
+
+</head>
+
+<body>
+
+ 
+
+ 
+
+</body>
+
+</html>
+
+ 
+
+It is a client-side script that is used to perform the dynamic operation under an HTML Web page. HTML only provides a set of elements and attributes, CSS provides a set of properties and Javascript provides dynamic code, client-side logic development, validation and animation in the HTML web page.
+
+Javascript can be executed in any Web Browser as compare to other scripts.
+
+
+
+(a) Ramesh’s basic salary is input through the keyboard. His dearness allowance is 40% of basic salary, and house rent allowance is 20% of basic salary. Write a program to calculate his gross salary
+
+1.   Bs=input
+
+2.   Hra=bs*20/100
+
+3.   Da=bs*40/100
+
+4.   Gs=bs+da+hra
+
+5.    (b) The distance between two cities (in km.) is input through the keyboard. Write a program to convert and print this distance in meters, feet, inches and centimeters.
+
+6.   (c) If the marks obtained by a student in five different subjects are input through the keyboard, find out the aggregate marks and percentage marks obtained by the student. Assume that the maximum marks that can be obtained by a student in each subject is 100.
+
+(d) Temperature of a city in Fahrenheit degrees is input through the keyboard. Write a program to convert this temperature into Centigrade degrees.
+
+ C = 5/9 x (F-32)
+
+(e) The length & breadth of a rectangle and radius of a circle are input through the keyboard. Write a program to calculate the area & perimeter of the rectangle, and the area & circumference of the circle.
+
+(f) Two numbers are input through the keyboard into two locations C and D. Write a program to interchange the contents of C and D.
+
+List of basic programming exercises
+
+1.       Write a  program to perform input/output of all basic data types.
+
+2.       Write a  program to enter two numbers and find their sum.
+
+3.       Write a  program to enter two numbers and perform all arithmetic operations.
+
+4.       Write a  program to enter length and breadth of a rectangle and find its perimeter.
+
+                                                              👍imp 👿  here we use TWO  Document.GET elements WITH Same id so  it work but only first priority (it print only data of a*b)
+<html>
+<head>
+  
+</head>
+ <body>
+  <input type="number" value="" id="tarun"   placeholder="length">
+  <br>
+  <input type="number" value="" id="tar"   placeholder="breadth">
+  <br>
+  <button onclick="fun()">clik</button>
+  <br>
+  <h1 id="here"></h1>
+           
+
+   <script>
+    const fun=()=>{
+      a= document.getElementById("tarun").value
+      b= document.getElementById("tar").value
+
+      document.getElementById("here").innerHTML =a*b 
+      document.getElementById("here").innerHTML =2(a+b) 
+    }
+              
+   </script>
+    
+    
+
+ </body>
+</html>
+
+5.       Write a  program to enter length and breadth of a rectangle and  perimeter find its area.
+
+<html>
+<head>
+  
+</head>
+ <body>
+  <input type="number" value="" id="tarun"   placeholder="length">
+  <br>
+  <input type="number" value="" id="tar"   placeholder="breadth">
+  <br>
+  <button onclick="fun()">clik</button>
+  <br>
+  <h1 id="here"></h1>
+           
+
+   <script>
+    const fun=()=>{
+      const a = parseInt(document.getElementById('tarun').value);
+  const b = parseInt(document.getElementById('tar').value);
+  const perimeter = 2 * (a + b);
+  document.getElementById('here').innerHTML = perimeter;   
+
+  
+  
+    }
+   </script>
+    
+    
+
+ </body>
+</html>
+
+6.       Write a  program to enter radius of a circle and find its diameter, circumference and area.
+
+7.       Write a  program to enter length in centimeter and convert it into meter and kilometer.
+
+8.       Write a  program to enter temperature in Celsius and convert it into Fahrenheit.
+
+9.       Write a  program to enter temperature in Fahrenheit and convert to Celsius
+
+10.   Write a  program to convert days into years, weeks and days.
+
+11.   Write a  program to find power of any number x ^ y.    ==>> x**y
+
+12.   Write a  program to enter any number and calculate its square root.
+
+13.   Write a  program to enter two angles of a triangle and find the third angle.
+
+14.   Write a  program to enter base and height of a triangle and find its area.
+
+15.   Write a  program to calculate area of an equilateral triangle.
+
+16.   Write a  program to enter marks of five subjects and calculate total, average and percentage.
+
+17.   Write a  program to enter P, T, R and calculate Simple Interest.
+
+Write a  program to enter P, T, R and calculate Compound Inter
+
+
+vandana malviya <vandana2022malviya@gmail.com>
+Oct 11, 2022, 2:06 PM
+to lokeshjigupta28@gmail.com, mukesh.randhawe, dk070025, Akram, ganeshsavner320, abhishekdubey7174, dhotepravin719, sonali_patel31, yogitasolanki1200, alfezkhan707, patilvishu8727, patelpallavi1995, reshabhjat5, nikitapatidar0198, vrushangsoni782, anujbhadoriya87, tripathirohini07, Ram98060, me, honeyagarwal1221
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+          <title></title>
+
+          <script type="text/javascript">
+
+                  
+
+                   function fun()
+
+                   {
+
+                             num1 = document.getElementById("txt1").value;
+
+                             num2 = document.getElementById("txt2").value;
+
+                             num3 = parseInt(num1)+parseInt(num2);
+
+                             alert(num3);
+
+                   }
+
+          </script>
+
+</head>
+
+<body>
+
+ 
+
+ <input type="text" id="txt1" placeholder="Enter first number" />
+
+ <br>
+
+ <br>
+
+ <input type="text" id="txt2" placeholder="Enter second number" />
+
+ <br>
+
+ <br>
+
+ <input type="button" id="btnclick" value="Click" onclick="fun()">
+
+</body>
+
+ 
+
+</html>
+
+ 
+
+ 
+
+
+
+Assignment:-
+
+ 
+
+1) Templrature convertor from celsius to faharenhite?
+
+ 
+
+ 
+
+2)  Create a Salary Calculator where basic, ta, da, comm,pf, leave will be entered by the user?
+
+ 
+
+ </script>
+
+</head>
+
+<body>

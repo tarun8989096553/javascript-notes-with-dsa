@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+// 1️⃣ What is Object Literal?
+
+// Object literal is simply a key:value pair data structure. 
+// use esliye krte hai ki object dissmilar type data type rakhta hai
+
+// Storing variables and functions together in one container, 
+// we can refer this as an Objects  ( all type).
+
+// object = school bag (bottle ,book lunch ,box)
+// object add krta hai function ,properties,arry dissmilar type ke data ko  but in js case array similar and dismller datatype ko rakhta hai
+
+
+
+        /////////////////////////////////////////////////object   example
+
+
+
+        const tarun={
+              name:"tarun",
+              class:"12",
+                   kale:{
+                     son:"rahul"  //======================>   👿 nested object 
+ },
+          getdata(){    // 👿  ====================>   function  use insde object way 
+                       console.log(`${tarun.name} and ${tarun.kale.son}   1️⃣   `)
+            }
+
+        }
+
+     ////:
+
+tarun.getdata()     // +++++++++++++++>>>>>>>>>>>>>>. 👿 here function called ka tarikha 
+                                   
+////////////// 👾        speacial baat hai yeah pe fucntion call  me argument pass karuga and parameter me luga print
+
+const first={
+              name:"tarun",
+              class:"12",
+                   second:{
+                     son:"rahul"  //======================>   👿 nested object 
+ },
+          getdat(ok,obj){    // 👿  ====================>   function  use insde object way 
+                       console.log(` ${first.name} and ${first.second.son}   and ${ok}  2️⃣ `)
+                       obj()
+            }
+
+        }
+    
+
+        const ranger=()=>{
+             console.log(`hello this is is object  literal`)
+        }
+
+
+first.getdat("tarun",ranger)     // +++++++++++++++>>>>>>>>>>>>>>. 👿  string pass ki argument  and ranger function call ki
+                                                
+
+
+
+// 2️⃣ What is this Object?
+
+// The definition  of "this" object is that it contain the current context. 
+
+// The this object can have different values depending on where it is placed.  
+
+ 👍   🥇   ARRE BHAI  KUCH NAHI THIS CURRENT CONTEXT USE KRTA HAI  KESE 
+
+   
+
+
+
+// // For Example 1 
+  bhai this  keyword ko under rahna pasand nahi hai vo hamesaha bhar bhag jata to esko vapas lane kae liye ke liye dirextion dena padta  hai kese this.name etc
+
+  console.log(this)   it print window mens current context eska window hai jo global hai mean window ki property acces kr sakte hai
+example below diya hai
+
+// console.log(this.alert('Awesome'));  // YEAH PE   this global hai
+// // it refers to the current context and that is window global object 
+
+
+// // ex 2 
+// function myName() {
+//     console.log(this);
+// }
+// myName();            // esme bhi window show kr rha hai
+
+
+
+
+
+// // ex 3 
+
+// var myNames = 'vinod';
+// function myName() {
+//     console.log(this.myNames);               // yeah pe dekh means this window (global) show krta hai  and myNames to global hai (outside the function ) so we can this  this happen here here `this`   property
+// }
+// myName();
+
+
+// // ex 4 
+// const obj = {
+//     myAge : 26,
+//     myName() {
+//       console.log(this.myAge);         //function ke bhar means global chai object ke under or nested object  to acces kr sakte hai
+//     }
+// }
+// obj.myName();
+
+// // ex 5 
+// // this object will not work with arrow function bcz arrow function is bound to class.
+
+// const obj = {
+//     myAge : 26,
+//     myName : () => {
+//       console.log(this);          // this show window jab tk path dege tabh tk this kya window ki puri property use kr sakty hai
+//     }
+// }
+// obj.myName();
+
+
+
+// // ex 6
+
+// let bioData = {
+//     myName : {
+//         realName : "vinod thapa",
+//         channelName : 'thapa technical'
+
+//     },
+//     // things to remember is that the myName is the key and the object is act like a value 
+//     myAge : 26,
+//     getData (){
+//       console.log(`My name is ${this.myName.channelName} and my age is ${this.myAge} `);
+//     }
+//   }
+
+//   bioData.getData();   
+
+
+// call method is used to call the method of another object 
+// or with call(), an object can use a method belonging to another object 
+
+// But as per other it is simply the way to use the this keyword or another object 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

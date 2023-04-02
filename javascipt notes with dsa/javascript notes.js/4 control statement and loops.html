@@ -1,0 +1,1733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                        /**** Section 6👉 Control Statement - 
+ * 
+ * 1️⃣If...Else */
+// The if statement executes a statement if a specified condition is truthy. 
+// If the condition is falsy, another statement can be executed.
+// if is reserved word  means dont use variable name
+
+
+// if raining = raincoat
+// else no raincoat
+
+
+// var tomr = 'sunny';
+
+// if(tomr == 'rain'){
+//   console.log('take a raincoat');
+// }else{
+//   console.log('No need to take a raincoat');
+// }
+
+
+
+
+// 🤩Challenge Time 
+// write a program that works out whether if a given year is a leap year or not?
+// A normal year has 365 days, leap years have 366, with an extra day in February.
+/// 👍 this is a example of nested if else
+
+
+// var year = 2020;
+// debugger;
+// if(year % 4 === 0){
+//   if(year % 100 === 0){
+//     if(year % 400 === 0){
+//       console.log("The year " + year + " is a leap year");
+//     }else{
+//       console.log("The year " + year + " is not a leap year");
+//     }
+//   }else{
+//     console.log("The year " + year + " is a leap year");
+//   }
+// }else{
+//   console.log("The year " + year + " is not a leap year");
+// }
+
+
+
+
+// What is truthy and falsy values in Javascript?
+
+// we have total 5 falsy values in javascript
+// 👉 0,"",undefined,null,NaN,false** is false anyway
+
+// if(score = 5){
+//   console.log("OMG, we loss the game 😭");
+// }else{
+//   console.log("Yay, We won the game 😀");
+// }
+
+
+
+
+// 2️⃣Conditional (ternary) operator
+
+// The conditional (ternary) operator is the only JavaScript operator 
+// that takes three operands
+// var age = 17;
+// if(age >= 18){
+//   console.log("you are eligible to vote");
+// }else{
+//   console.log("you are not eligible to vote");
+// }
+
+// var age = 18;
+// console.log((age >= 18) ? "you can vote" : "you can't vote");
+
+
+
+👍 👍 mem         
+
+WAP to calculate the greatest number?
+var a='a';
+  ch.charCodeAt() >= 65 && ch.charCodeAt() <= 90;
+<script>
+
+         var a =parseInt(prompt("Enter 1st number"));
+  var b =parseInt(prompt("Enter 2nd number"));
+  var c =parseInt(prompt("Enter 3rd number"));
+         if(a>b)
+         {
+             if(a>c)
+             document.write("a is greater");
+             else
+             document.write("c is greater");
+         }
+        else
+        {
+           if(b>c)
+           document.write("b is greatest");
+           else
+           document.write("c is greatest");
+        }
+ </script>
+
+if(a>b)&& (a>c))
+d.w(a)
+if(b>a)&& (b>c))
+d.w(b)
+if(c>a)&& (c>b))
+d.w(a)
+
+
+
+WAP to calculate greatest using four different numbers?
+
+<script>
+var a=10000,b=2000,c=3000,d=4000;
+if(a>b)
+{    if(a>c)
+    {
+         if(a>d)
+         document.write("a is greatest");
+        else
+         document.write("d is greatest");      
+    }
+    else
+    {
+       if(c>d)
+      document.write("c is greatest");
+      else
+       document.write("d is greatest");
+    }
+}
+else
+{
+    if(b>c)
+    {
+        if(b>d)
+           document.write("b is greatest");
+        else
+           document.write("d is greatest");  
+    }
+
+   else
+   {
+       
+       if(c>d)
+      document.write("c is greatest");
+      else
+       document.write("d is greatest");
+    }
+
+
+}
+
+
+
+
+WAP to check vowel and consonant?
+
+/* WAP to check vowel and consonant */
+<script>
+        var ch;
+        ch=prompt("Enter char");      
+        var s= "";
+       if(ch=='a')
+          s = "Vowel";
+       else
+       {
+           if(ch=='e')
+            s = "Vowel";
+          else
+            {
+                if(ch=='i')
+                  s = "Vowel";
+                else
+                 {
+                     if(ch=='o')
+                     s = "Vowel";
+                     else
+                     {
+                         if(ch=='u')
+                            s = "Vowel";
+                         else
+                           s = "Consonent";
+                     }
+                 }
+
+            }
+       }
+
+       document.write(s);
+       
+</script>
+     
+
+ 
+
+
+Limitation:-
+
+Its structure is complex for multiple conditions, for example, if we want to check maximum using five different numbers?
+
+
+Advantage:-
+
+We can create a conditional-based program without using logical operators.
+
+
+4) Ladder If--Else or Else If Block:-
+
+It will work step by step means if the first condition will true then it will be executed when it will be false then the next condition will be checked and finally, if no one condition will be true then else statement will be executed.
+
+we will use if, else if, and else statement using Ladder If--Else.
+
+
+Syntax of Ladder if else if
+
+if(condition)
+{
+        Statement
+}
+else if(condition)
+{
+   Statement;
+
+}
+...
+else
+{
+   Statement;
+}
+
+
+WAP to check the greatest number using Ladder if-else?
+<script>
+   var a=100,b=30,c=20;
+   if(a>b &&a>c)
+   document.write("a is greatest");
+   if(b>a &&b>c)
+      document.write("b is greatest");
+   if(c>a&&c>b)
+      document.write("c is greatest");  
+</script>
+
+
+<script>
+   var a=100,b=30,c=20;
+   if(a>b &&a>c)
+   document.write("a is greatest");
+    else if(b>c)
+      document.write("b is greatest");
+   else
+      document.write("c is greatest");  
+</script>
+
+WAP to check greatest using four different numbers?
+<script>
+var a=1000,b=2000,c=3000;
+if(a>b && a>c  )  
+      document.write("a is greatest");
+if (b>a && b>c)  
+      document.write("b is greatest");
+if (c>a && c>b)  
+      document.write("c is greatest");
+</script>
+
+
+<script>
+var a=1000,b=2000,c=3000,d=4000;
+
+if(a>b && a>c && a>d)  
+      document.write("a is greatest");
+else if (b>c && b>d)  
+      document.write("b is greatest");
+else if(c>d)        
+      document.write("c is greatest");
+else
+      document.write("d is greatest");
+</script>
+
+
+WAP to check vowel and consonant using Ladder if--else:-
+
+/* WAP to check vowel and consonent */
+<script>
+
+     var ch;
+        ch=prompt("Enter char");
+       
+        var s= "";
+       if(ch=='a')
+          s = "Vowel";
+       else if(ch=='e')
+          s = "Vowel";
+       else if(ch=='i')
+          s = "Vowel";
+       else if(ch=='o')
+          s = "Vowel";
+       else if(ch=='u')
+          s = "Vowel";
+       else
+          s = "Consonent";
+     document.write(s);
+</script>
+
+
+5) Multiple If:-
+
+We can write more than one if statement to solve multiple conditions with multiple results.
+
+
+Syntax of Multiple If:-
+
+
+if(condition)
+{
+     Statement;
+ }
+if(condition)
+{
+    Statement;
+}
+ if(condition)
+{
+   statement;
+}
+
+WAP to check divisibility of numbers that number is divisible by 3,5 and 9 with all combinations?
+
+
+
+
+
+
+var num=27
+if(num%3==0)
+document.write("Divisible by 3");
+if(num%5==0)
+document.write("Divisible by 5");
+if(num%9==0)
+document.write("Divisible by 9");
+</script>
+
+
+Assignment of If--else:
+
+Q1)  WAP to display yes, no, and cancel when the user assigns y,n, and c?
+
+<script>
+  var ch=prompt("Enter any char (y/n/c)");
+  if(ch=='y')
+   document.write("Yes");
+  else if(ch=='n')
+  document.write("NO");
+  else if(ch=='c')
+   document.write("Cancel")
+   else
+     document.write("Other");
+</script>
+
+
+Q2)  WAP to check 1 digit, 2 digits,3 digits, and above 3 digit number?
+
+
+1. Write  program to find minimum between two numbers.
+2. Write a  program to find minimum between three numbers.
+3. Write a program to check whether a number is negative, positive or zero.
+4. Write a program to check whether a number is divisible by 5 and 11 or not.
+5. Write a program to check whether a number is even or odd.
+6. Write a program to check whether a year is leap year or not.
+7. Write a program to check whether a character is alphabet or not.
+8. Write a program to input any alphabet and check whether it is vowel or consonant.
+9. Write a program to input any character and check whether it is alphabet, digit or special character.
+<script>
+
+    For capital alphabets 65 – 90
+For small alphabets 97 – 122
+For digits 48 – 57
+
+	// JavaScript program to find type of input character{
+	
+  
+  
+  
+    let input =prompt('enter your word')
+   var input_char = input.charCodeAt(0); zero likkhna jaruri hai
+		
+		// CHECKING FOR ALPHABET
+		if (
+		(input_char >= 65 && input_char <= 90) ||
+		(input_char >= 97 && input_char <= 122)
+		)
+		document.write(" Alphabet ");
+			
+		// CHECKING FOR DIGITS
+		else if (input_char >= 48 && input_char <= 57)
+		document.write(" Digit ");
+			
+		// OTHERWISE SPECIAL CHARACTER
+		else document.write(" Special Character ");
+	}
+
+	// Driver Code
+	var input_char = "$";
+	charCheck(input_char);
+		
+	// This code is contributed by rdtank.
+	</script>
+
+10. Write a program to check whether a character is uppercase or lowercase alphabet.
+11. Write a program to input week number and print week day.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+                <input type="text" id="first" placeholder="enter">
+                <br>
+           
+                <button id="no">click</button>
+                <h1 id="go"> enter day number</h1>
+
+    <script>
+       
+       let btn=document.getElementById("no")
+        
+
+       const tarun=()=>{
+             let first=parseInt(document.getElementById("first").value)
+
+             let day;
+             if(first==0)
+             {
+                day="sunday"
+                console.log("sunday")
+             }
+             else if(first==1){
+                day="monday"
+                console.log("monday")
+             }
+             else if(first==2){
+                day="tuesday"
+                console.log("tuesday")
+             }
+             else if(first==3){
+                day="wednesday"
+                console.log("wed")
+             }
+             else if(first==4){
+                day="thusday"
+                console.log("thu")
+             }
+             else if(first==5){
+                day="friday"
+                console.log("ffri")
+             }
+             else {
+                day="saturday"
+                console.log("sat")
+             }
+
+             document.getElementById("go").innerHTML= `${day}`
+        
+       }
+          
+
+
+
+       btn.addEventListener("click",tarun)
+       
+
+
+    </script>
+</body>
+</html>
+
+
+12. Write a program to input month number and print number of days in that month.
+13. Write a program to count total number of notes in given amount konsa notes cahiye vo bhi option bana
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>body tarunkale</h1>
+  <script>
+    let etmoption = 100;
+let money = 1000;
+if (etmoption == 100) {
+  let tarun = 0;
+  let i;
+
+
+
+  for (i = 0; money >= tarun; i++) {
+    tarun = tarun + 100;
+    console.log(i);
+  }
+  console.log("Final iteration count: " + (i-1));  total count 11 de raha tha 0 to 10 that why -1
+} else {
+  console.log("Option not available");
+}
+
+  </script>
+</body>
+</html>
+
+14. Write a program to input angles of a triangle and check whether triangle is valid or not.sum=180
+15. Write a program to input all sides of a triangle and check whether triangle is valid or not.
+16. Write a program to check whether the triangle is equilateral, isosceles or scalene triangle.
+17. Write a program to find all roots of a quadratic equation.
+18. Write a program to calculate profit or loss.
+       loss=  cp-selling price
+     profit=  sp-cp
+19. Write a program to input marks of five subjects Physics, Chemistry, Biology, Mathematics and Computer. Calculate percentage and grade according to following:
+Percentage >= 90% : Grade A
+Percentage >= 80% : Grade B
+Percentage >= 70% : Grade C
+Percentage >= 60% : Grade D
+Percentage >= 40% : Grade E
+Percentage < 40% : Grade F
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+               <input type="text" id="math">
+               <input type="text" id="ph">
+               <input type="text" id="che">
+               <input type="text" id="hind">
+               <input type="text" id="eng">
+               <button onclick="fun()">vjj</button>
+           <div id="result"></div>
+  <script>
+ 
+ const fun=()=>{
+
+  
+  let a = parseFloat(document.getElementById("math").value);
+    let b = parseFloat(document.getElementById("ph").value);
+    let c = parseFloat(document.getElementById("che").value);
+    let d = parseFloat(document.getElementById("hind").value);
+    let e = parseFloat(document.getElementById("eng").value);
+
+   let avg =((a+b+c+d+e)/500)*100
+  
+     // let avg = ((math + ph + che + hind + eng) / 500) * 100;
+
+// Assign grade based on average
+let grade;
+if (avg >= 90) {
+  grade = "A";
+} else if (  avg <=89 &&   avg >= 80) {
+  grade = "B";
+} else if (avg <= 79  && avg >= 70) {
+  grade = "C";
+} else {
+  grade = "F";
+}
+document.getElementById("result").innerHTML = `Your grade is ${grade} (${avg}%)`;
+  }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+20. Write a program to input basic salary of an employee and calculate its Gross salary (total salary )according to following:
+Basic Salary <= 10000 : HRA = 20%, DA = 80%                               20%=20/100     Gross salary (toatal salary without cut other taxes ) = bs+hra+ da
+Basic Salary <= 20000 : HRA = 25%, DA = 90%
+Basic Salary > 20000 : HRA = 30%, DA = 95%                                 10000 * 20%+ 80%* 10000+ basic salary=groos salray
+21. Write a program to input electricity unit charges and calculate total electricity bill according to the given condition:
+For first 50 units Rs. 0.50/unit
+For next 100 units Rs. 0.75/unit
+For next 100 units Rs. 1.20/unit
+For unit above 250 Rs. 1.50/unit
+An additional surcharge of 20% is added to the bill
+
+<script>
+let unit 
+let unitchatge
+let total =(20/100)*unitchatge
+if(unit>50)
+{
+ unitchatge=.50*unit
+  
+}
+else if(unit >100){
+    unitchatge=.75*unit
+}
+else if(unit>250){
+  unitchatge=1.75*unit
+}
+else {
+   unitchatge=2*unit
+}
+document.getElementById("whatever").innerHTML=`${total}`
+  </script>
+
+  WAP to increase the salary of employees from 500, if the salary is less than 10000 otherwise the same salaries will display?
+
+<script>
+
+         var sal=8000;
+       
+         if(sal<10000)
+           sal=sal+500;
+         document.write(sal);
+</script>
+
+
+/*WAP to pass student by grace if the entered subject mark is >28 and <33 otherwise same mark will display.*/
+var mark =parseInt(prompt("Enter number"));
+       var g;
+          if(mark>=28 && mark<33) 29
+           {
+            g = 33-mark;    g=33-29 =4
+            mark =mark+g;    29+4=33
+            document.write("Grace marks is "+g); 4
+           }
+          document.write("mark is"+mark); 33
+</script>
+
+wap to input a 3 digit no and check wheather the number is armstrong no or not
+153
+x=1*1*1=1
+y=5*5*5=125
+z=3*3*3=27
+153
+sum=x+y+z
+if(sum==n)
+153
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+var n,a1,a2 ,b1,b2 ;
+n=parseInt(prompt("Enter any 3 digit no"));
+a1=Math.floor(n/100);//1
+b1=n%100;//=53
+a2=Math.floor(b1/10);//=5
+b2=b1%10;//=3
+x=a1*a1*a1;
+y=a2*a2*a2;
+z=b2*b2*b2;
+if ((x+y+z)==n)
+   document.write("armstrong no");    
+else
+  document.write("not armstrong  no");
+</script>
+   
+</head>
+<body>
+
+</body>
+</html>
+WAP to calculate square if the number is odd and calculate the cube if the number is even?
+
+<script>
+         var num=4;
+         var res=0;
+         if(num%2==0)
+           res=num*num*num;
+         else
+           res=num*num;
+         document.write(res);
+</script>
+//======================================================================================================
+
+// 3️⃣ switch Statement
+// Evaluates an expression, matching the expression's value to a 
+// case clause, and executes statements associated with that case.
+
+// 1st without break statment 
+// Find the Area of circle, triangle and rectangle?
+
+// var area = "square" ;
+// var PI = 3.142, l=5, b=4, r=3;
+
+// if(area == "circle"){
+//   console.log("the area of the circle is : " + PI*r**2);
+// }else if(area == "triangle"){
+//   console.log("the area of the triangle is : " + (l*b)/2);
+// }else if(area == "rectangle"){
+//   console.log("the area of the rectangle is : " + (l*b));
+// }else{
+//   console.log("please enter valid data");
+// }
+
+// var area = "dsfsad" ;
+// var PI = 3.142, l=5, b=4, r=3;
+
+// switch(area){
+//   case 'circle': 
+//     console.log("the area of the circle is : " + PI*r**2);
+//     break;
+
+//   case 'triangle':
+//     console.log("the area of the triangle is : " + (l*b)/2);
+//     break;
+
+//   case 'rectangle':
+//     console.log("the area of the rectangle is : " + (l*b));
+//     break;
+
+//   default:
+//     console.log("please enter valid data");
+// }   
+
+
+
+// 🤗break
+// Terminates the current loop, switch, or label 
+// statement and transfers 
+// program control to the statement following the terminated statement.
+
+
+// 🤗continue
+// Terminates execution of the statements in the current iteration of the 
+// current or labeled loop, and continues execution of the loop with the 
+// next iteration.
+
+
+
+
+
+// 4️⃣ While Loop Statement
+// The while statement creates a loop that executes a specified statement 
+// as long as the test condition evaluates to true. 
+
+// var num=20;
+// // block scope 
+// while(num <= 10){
+//   console.log(num); //infinte loop
+//   num++;
+// }
+
+// 5️⃣ Do-While Loop Statement
+
+// var num = 20;
+// do{
+//   debugger;
+//   console.log(num); //infinte loop
+//   num++;  num=num+1
+// }while(num <= 10);
+
+// 6️⃣ For Loop 
+
+// for(var num = 0; num <= 10; num++){
+//     debugger;
+//     console.log(num);
+// }
+ 
+print number 1 to 10
+let a=10 
+for(i=0;a>i;i++){
+    console.log(i)
+}
+
+
+
+
+sum of nth term logic
+                               n(n+1)/2
+<script>
+   let a=10
+   let k=0
+  for(i=0;a>=i;i++){
+     k=k+i
+     console.log(k)
+  }
+   
+table any Ka
+
+let a=7
+for (i=0;10>=i;i++){
+    let n=a*i
+    console.log(n)
+}
+
+
+  </script>
+
+
+
+  👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍
+ASSIGNMENT - PRINT THIS SERIES
+
+2,4,6,8,10............50
+1,3,5,7,9........50
+1,4,9,16.......50  // nstural numver squaew
+1,8,27.........50// 1*1 2*4  3*9
+1+2+3+4+5+6.......10=sum 55
+
+ i=1
+1
+i=1+1=2
+2
+i=2+1=3
+
+<html>
+<script>
+var i=1;
+var name=prompt("Enter your name");
+
+while(i<=10)
+{
+ document.write("<br>"+name+" "+i);
+  i=i+1;
+}
+</script>
+</html>
+
+
+<html>
+<script>
+var i=2;
+while(i<=50)
+{
+ document.write("<br>"+name+" "+i);
+  i=i+2;
+}
+</script>
+</html>
+
+
+<html>
+<script>
+var i=1,a;
+while(i<=50)
+{
+    a=i*i;
+ document.write("<br>"+a+" ");
+  i=i+1;
+}
+</script>
+</html>
+1 4 9 16...50
+<html>
+<script>
+var i=1,sum=0;
+while(i<=10)
+{
+    sum=sum+i;
+ document.write("<br>"+i );
+  i=i+1;
+}
+ document.write("<br>"+"sum = "+sum);
+</script>
+</html>
+ 
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script type="text/javascript">
+   
+    function sum()
+    {
+num1 = document.getElementById("txt1").value;
+num2 = document.getElementById("txt2").value;
+num3 = parseInt(num1)+parseInt(num2);
+  alert("Sum= "+num3);
+    }
+    function sub()
+    {
+num1 = document.getElementById("txt1").value;
+num2 = document.getElementById("txt2").value;
+num3 = parseInt(num1)-parseInt(num2);
+  alert("Sub= "+num3);
+    }
+   
+    </script>
+   
+</head>
+<body>
+<form name="f1">
+ <input type="text" id="txt1" placeholder="Enter first number" />
+ <br>
+ <br>
+ <input type="text" id="txt2" placeholder="Enter second number" />
+ <br>
+ <br>
+ <input type="button" id="btnclick" value="Sum" onclick="sum()">
+ <input type="button" id="btnclick" value="Sub" onclick="sub()">
+ <input type="button" id="btnclick" value="div" onclick="div()">
+ <input type="button" id="btnclick" value="mult" onclick="mult()">
+ 
+ <input type="reset" value="clear">
+ </form>
+</body>
+
+</html>
+
+
+
+
+
+
+do-while loop
+
+do
+{
+       statement;
+       
+}while(condiction);
+
+
+wap to calculate factorial of a number
+5=1*2*3*4*5=120
+
+<html>
+<body>
+<script>  
+var i=1,n,a=1;  
+n=parseInt(prompt("Enter any no"));
+do{  
+      a=a*i;
+      i=i+1;  
+}while (i<=n);  
+document.write("factorial ="+a);
+n=5
+i=1 a=1
+a=1*1=1
+i=2
+a=1*2=2
+i=3
+a=2*3=6
+i=4
+a=6*4=24
+i=5
+a=24*5=120
+
+document.write("Factorial of "+n+" is "+a + "<br/>");  
+</script>  
+</body>
+</html>
+
+n=5  a=1 i=1
+a=1*1=1     i=2
+a=1*2=2    i=3
+a= 2*3=6   i=4
+a=6*4 =24  i=5
+a= 24*5=120 i=6
+
+
+
+
+
+
+n=5 a=1 i=1
+a=1*1=1  i=2
+a=1*2=2  i=3
+a=2*3=6 i=4
+a=6*4=24 i=5
+a=24*5=120
+
+
+<html>
+<script>
+var i=10;
+while(i>=1)
+{
+ document.write("<br>"+i);
+  i=i-1;
+}
+</script>
+</html>
+<html>
+<font size="10" color="red">
+<script>
+var i=1,n,a;
+n=parseInt(prompt("Enter any no"));2
+while(i<=10)
+{
+    a=n*i;
+ document.write(n+"*"+i+"="+a+"<br>");
+if (i==5)
+    break;
+  i=i+1;
+}
+</script>
+</html>
+i=1 n=3 a
+a=3*1=1  i=2
+a=3*2=6 i=3
+a=3*3=9 i=4
+a=3*4=12 i=5
+
+
+
+1. 1)Write a   program to count number of digits in a number.
+2. 2)Write a   program to enter a number and print its reverse.
+3. 3)Write a   program to check whether a number is palindrome or not.
+4. 1221  
+5. 4) wap to find factorial of a number
+6. 5=1*2*3*4*5=120
+7. 5) wap to find power of a no.
+8. n=2
+9.   p=3
+10.  8
+11. 6)wap to find wheater the no is prime or not
+12.
+13.
+14. Write a   program to print all natural numbers from 1 to n. - using while loop
+15. Write a   program to print all natural numbers in reverse (from n to 1). - using while loop
+16. Write a  program to print all alphabets from a to z. - using while loop
+17. Write a   program to print all even numbers between 1 to 100. - using while loop
+18. Write a   program to print all odd number between 1 to 100.
+19. Write a   program to find sum of all natural numbers between 1 to n.
+20. Write a  program to find sum of all even numbers between 1 to n.
+21. Write a   program to find sum of all odd numbers between 1 to n.
+22. Write a  program to print multiplication table of any number.
+23. Write a   program to count number of digits in a number.
+24. Write a  program to find first and last digit of a number.
+25. Write a   program to find sum of first and last digit of a number.
+26. Write a   program to swap first and last digits of a number.
+27. Write a   program to calculate sum of digits of a number.
+28. Write a  program to calculate product of digits of a number.
+29. Write a   program to enter a number and print its reverse.
+30. Write a   program to check whether a number is palindrome or not.
+31. Write a  program to find frequency of each digit in a given integer.  1221123
+32. Write a  program to enter a number and print it in words.
+33. Write a  program to print all ASCII character with their values.
+34. Write a  program to find power of a number using for loop.
+35. Write a  program to find all factors of a number.
+36. Write a  program to calculate factorial of a number.
+37. Write a  program to check whether a number is Prime number or not.
+38. Write a  program to print all Prime numbers between 1 to n.
+39. Write a  program to find sum of all prime numbers between 1 to n
+
+==========================================================================================================================================================================================================================================================================================================================================
+6)
+ -----    *
+ ----  *     *
+ --- *    *    *
+ -- *   *     *    *
+ -*    *    *    *    *
+     *    *   *     *
+       *   *   *  *
+           *  *  *
+             *  *
+                *  
+
+WAP to print the following statement?
+
+1 2 3 4 5
+1 2 3 4
+1 2 3
+1 2
+1
+............................................................................................
+
+A a B b C
+A a B b
+A a B
+A a
+A
+..................................................................................................
+
+
+
+
+1 2 3 4 5
+5 4 3 2
+1 2 3
+5 4
+1
+.......................................................................
+
+
+
+
+ASSIGNMENT:-
+
+1 0 0 1 0
+1 0 0 1
+1 0 0
+1 0
+1
+
+
+
+
+
+
+
+
+
+
+
+
+54321
+4321
+321
+21
+1
+
+55555
+4444
+333
+22
+1
+
+
+
+
+
+
+
+
+
+*
+**
+***
+****
+***
+**
+*
+
+
+
+
+
+
+
+-------------------------------------------------
+
+
+*
+***
+*****
+***
+*
+
+
+1 2 3 4 5
+1 2 3 4
+1 2 3
+1 2
+1
+A a B b C
+A a B b
+A a B
+A a
+A
+
+1 2 3 4 5
+1 2 3 4
+1 2 3
+1 2
+1
+
+A a B b C
+A a B b
+A a B
+A a
+A
+
+
+
+
+1 0 0 1 0
+1 0 0 1
+1 0 0
+1 0
+ 1
+
+
+A B C D E
+B C D E
+C D E
+D E
+E
+
+
+
+
+12345
+1234
+123
+12
+1
+
+12345
+5432
+123
+54
+1
+
+ABCDE
+BCDE
+CDE
+E
+
+
+1 2 3 4 5
+5 4 3 2
+1 2 3
+5 4
+1
+
+1 2 3 4 5
+1 2 3 4
+1 2 3
+1 2
+1
+
+
+A a B b C
+A a B b
+A a B
+A a
+A
+
+
+1 2 3 4 5
+5 4 3 2
+1 2 3
+5 4
+1
+
+1 0 0 1 0
+1 0 0 1
+1 0 0
+1 0
+1
+
+
+
+A B C D E
+B C D E
+C D E
+D E
+E
+ 
+
+
+
+
+
+
+
+
+
+
+
+1)1,2,3,4,....10
+2) 2 4 6 8 10
+3) 1 3 5 7 9
+4) 1 4 9 16 25
+5) 1+2+3+4...10=SUM55
+6) WAP TO PRINT TABLE OF ANY NO
+7 wap to print factrial of any no  5
+
+C programs are frequently asked in the interview. These programs can be asked from basics, array, string, pointer, linked list, file handling etc. Let's see the list of c programs.
+
+1) Fibonacci Series
+
+Write a c program to print fibonacci series without using recursion and using recursion.
+
+Input: 10
+
+Output: 0 1 1 2 3 5 8 13 21 34
+
+2) Prime number
+
+Write a c program to check prime number.
+
+Input: 44
+
+Output: not prime number
+
+Input: 7
+
+Output: prime number
+
+3) Palindrome number
+
+Write a c program to check palindrome number.
+
+Input: 329
+121
+1331
+
+
+Output: not palindrome number
+
+Input: 12321
+
+Output: palindrome number
+
+4) Factorial
+
+Write a c program to print factorial of a number.
+
+Input: 5
+
+Output: 120
+
+Input: 6
+
+Output: 720
+
+5) Armstrong number
+
+Write a c program to check armstrong number.
+
+Input: 153
+
+Output: armstrong
+
+Input: 22
+
+Output: not armstrong
+
+
+
+
+ ***********************************************************
+
+infinite  while loop example using a boolean value
+
+<html>
+<font color="green">
+<script>
+var i=1;
+var a="true";
+while(a)
+{
+    if(i>=10)
+         a=false;
+    document.write("<br>"+i);
+   i++;
+}
+</script>
+</html>
+WAP to create a table of any number using infinite Loop:-
+
+<html>
+<font color="green">
+<script>
+var num,i=1;
+num=parseInt(prompt("Enter any no."));3
+       while(true)
+       {
+         document.write("<br>"+num*i);
+          if(i>=10)
+           break;
+          i++;
+       }
+</script>
+</html>
+
+limitation of while loop:-
+1)  Complex structure hence it can not be managed in nested sequence easily.
+2)  take more process time to program execution  as compared to for loop          
+   
+
+ 1.2 for -
+
+using this we can contain all sub-statements using for statements, it provides a simple syntax structure as compared to a while and do-while loop.
+for loop is mostly used to create a finite condition-based program.
+flow of for loop:-
+      1        2              4
+for(init; condition; iteration)
+ {
+        3
+        statement;
+ }
+var i;
+for(i=1; i<=10;i++)
+           document.write(i+"<br>");
+
+i=1     1
+i=2     2 i=3
+3  4
+4 5
+
+finite for loop example:-
+
+modified for loop
+<html>
+<font color="green">
+<script>
+var num,i=1 ;
+num=Number(prompt("enter no"));3
+for( ;i<=10; )
+{   document.write(num+"*"+i+"="+(num*i)+"<br>");          
+     i++;
+}
+ </script>
+</html>
+Infinite for loop example:-
+<html>
+<font color="green">
+<script>
+var num,i=1 ;
+num=Number(prompt("enter no"));2
+ for( ; ;)
+{
+   document.write(num+"*"+i+"="+(num*i)+"<br>");          
+       if(i>=10)
+            break;
+       i++
+}
+ </script>
+</html>
+
+
+<html>
+<body>
+<script>
+      var s = '';
+      for (var i = 65; i <= 90; i++)
+            s += String.fromCharCode(i);
+   document.write(s);
+
+</script>
+</body>
+</html>
+
+
+---------------------------------------------------------
+
+
+Nested For Loop:-   We will write more than one for loop using a nested sequence, it Contains a collection of outer for loop and multiple inner for loop.
+
+# # # #
+# # # #
+# # # #
+1 2 3 4 5
+1 2 3 4 5
+1 2 3 4 5
+
+
+<html>
+<body>
+<script>
+var i,j;
+for(i=1;i<=3;i++) i=3
+{
+     for(j=1;j<=4;j++)j=1
+    {
+          document.write("  #  ");
+    }
+   document.write("<br>");
+}
+</script>
+</body>
+</html>
+# # # #
+# # # #
+# # # #
+
+1 2 3 4
+1 2 3 4
+1 2 3 4
+
+<html>
+<body>
+<script>
+var i,j;
+for(i=1;i<=3;i++)
+{
+     for(j=1;j<=4;j++)
+    {
+          document.write("# &emsp;" );
+    }
+   document.write("<br>");
+}
+</script>
+</body>
+</html>
+
+#  #  # #
+#  # # #
+#  # # #
+
+2 4 6 8 10
+2 4 6 8 10
+2 4 6 8 10
+<html>
+<body>
+<script>
+var i,j;
+for(i=1;i<=3;i++)
+{
+     for(j=1;j<=4;j++)
+    {
+          document.write(j );
+    }
+   document.write("<br>");
+}
+</script>
+</body>
+</html>
+
+
+i=1 j=1 j=2 j=3 j=4
+i=2 j=1 j=2 j=3 j=4
+i=3
+for(init;condition;iteration)
+{
+   for(init;condition;iteration)
+   {
+            Statement;
+
+  }
+ 
+}
+1)
+*
+* *
+* * *
+* * * *
+* * * * *
+
+2)
+* * * * *
+* * * *
+* * *
+* *
+*
+3)
+1 2 3 4 5
+1 2 3 4
+1 2 3
+1 2
+1
+4)
+1
+2 2
+3 3 3
+4 4 4 4
+5 5 5 5 5
+5)
+-----       *
+----    *      *
+---   *     *        *
+--  *     *       *        *
+-*      *       *      *      *
+
+<html>
+<body>
+<script>
+     var i,j,k;
+for(i=1;i<=5;i++)  
+{
+     for(j=5;j>=i;j--)
+    {
+          document.write("&ensp;");
+    }
+    for(k=1;k<=i;k++)
+    {
+          document.write("*&ensp;");
+    }
+   
+   document.write("<br>");
+}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 😀6: challenge Time 🏁
+// JavaScript program to print table for given number (8)?
+
+// output :  8 * 1 = 8 
+        //   8 * 2 = 16(8*2)
+        //  => 8 * 10 = 80
+
+// for(var num = 1; num<= 10; num++){
+//     var tableOf = 12;  
+//   console.log(tableOf + " * " + num + " = " + tableOf * num);
+// }
+
+for in ,for of loop
+
+    FOR -OF AND FOR -IN  ARE TWO DIIFERTNENT LOOPING CONSTRAUCT IN JS
+    
+    FOR OF IS USED TO ITERATE VER THE VLAUE IN  AN ITERABLE  OBJECT  , SUCH AS  AN ARRAY  ARRAY  ,STRING  IT allows
+     YOU TO ACCEES THE VALUE OF THE  OBJECT  DIRECTLY ,WITHOUT HAVING TO USE AN Index
+
+     HERE IS AN Example OF USING FOTR -OF TO LOOP OVER THE  CHARACTER IN A STRING
+
+
+FOR IN  == IT ALLOWS YOU TO ACCES  THE KEYS OF THE OBJECT ,RATHER THAN  THE VALUE
+
+                           //   👍 for  of loop   exmaple 
+
+                         //   in string cse  
+                         //   const nmaae="tarun"
+                           // for( let a of nmaae ){
+                            //  console.log(`hello ${a}`)       // it print hello t,hello a, hello r like that means print value
+                         //   console.log(`${nmaae}`)    // it print norma l tarun
+                          //  }                    
+                         //   const maae="tarun"
+                           // for( let a in maae ){
+                           //   console.log(`${nmaae}`)    // it print norma l tarun
+                           //   console.log(`hello ${a}`)  //it print index number  t=0 ,a=1,r=2, upto 4 index number          in++++>>> index number print
+                           
+                         //   }                
+                            
+                        //in case  of  array 
+  //                       const number=[45,456,33,67,333,78,98]
+  //                       for (let  a  in number){
+  //   console.log(`hello ${a}`) // in aray case it print only key means in case array ,string  it print index number
+  //  }
+
+                        
+  //  for (let  a  of number){
+  //   console.log(`hello ${a}`) // in array case it print only value 
+  //  }
+
+
+
+        // ===================================   //    in string case and array case  me in ==> index number and of ==>value
+
+  //         //   in case object(object is the combination pair of key and value)
+  //          let tarun ={
+  //               fnname:'tarun',
+  //               lname:"kale"
+  //          }
+
+  // //          for (let  a  of tarun){
+  // //   console.log(`hello ${a}`) // in object case it print only value means 
+  // //  }
+  // //          for (let  a  in tarun){
+  // //   console.log(`hello ${a}`) //  in aray case it print only key means in case array ,string  it print index number
+   
+  // //  }
+
+
+      // 👍 👍 for aeach method 
+                                                                      //  defination==> the for each() methods calls  a function  once for each Element in  an array ,in order
+
+                                                                        
+                //       Syntax
+                //     arrname.foreach(callback(current va;lue[index,[array]])[,thisarg])
+
+                //     callback taake three arg currentvalue,index,arraay
+                //     fora each take two argument  callback ,thisarg
+
+                //                    currentvalue= the value of current Element 
+
+                //                    index = optional the array of the current Element
+
+                //                    arr= optional .the array object the current Element belongs
+
+
+
+                //  example 
+                let ar=['tarun',"kale","pokemon","ok"]
+
+ar.forEach((currentvalue,index,arraay)=>{
+     console.log(currentvalue ," ", index," ", arraay)
+})
+
+
+it   print this
+tarun   0   (4) ['tarun', 'kale', 'pokemon', 'ok']
+practice.html:35 kale   1   (4) ['tarun', 'kale', 'pokemon', 'ok']
+practice.html:35 pokemon   2   (4) ['tarun', 'kale', 'pokemon', 'ok']
+practice.html:35 ok   3   (4) ['tarun', 'kale', 'pokemon', 'ok']
+
+
+
+
+
+// ************************************************************
+    </script>
+</body>
+</html>

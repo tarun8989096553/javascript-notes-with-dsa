@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>  interval ko stop krna ke liya called clearinterval </p>
+    <button id="btn">clik</button>
+    <button id="bt">stop</button>
+
+
+    <script>
+
+const stopNum=document.querySelector('p')              // new concept hota kya hai hai  saame as id esne paragraph ka data acces  krne ke liya called queryselector  or  we can use id p tag me id laga de 
+
+const btn= document.querySelector('#btn')                // query selector through id bhi acce kr sakete hai but # yeh use krna hoga phele
+const stopinterval=document.getElementById('bt')
+let timeref;
+let num=0
+
+
+const  showstopNum=()=>{
+  timeref=   setInterval(()=>{
+        stopNum.innerHTML=`${num}`
+        num++
+     },1000)
+}
+     
+  btn.addEventListener('click',showstopNum)
+
+  // jab bhi cleartimeout or clear interval me hamesjha out ref lena padtha hai and then pass krna padtha below function ke under argument me pass kiay
+
+  stopinterval.addEventListener('click',()=>{
+
+    clearInterval(timeref)
+  }
+
+  )
+
+
+
+  
+
+    </script>
+</body>
+</html>

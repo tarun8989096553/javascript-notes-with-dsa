@@ -1,0 +1,489 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+                    
+                                                                                 <h1> 👍 🧇 welcome js tuturial</h1>
+                                                                                              <h1> 👍 👍 👍  JAVA SCRIPT </h1>
+        <script>
+                                    
+                                                                             /****  Section 1👉 we need to do it in console ****/
+// alert("Welcome, to Complete JavaScript course");              💯 💯 IT WORK AS POP UP WHEN WE WRITE THIS Always first  it excutes then otheer
+// console.log('Welcome, to complete JavaScript Course');           💯 HERE WE CAN WRITE  BOTH SIDE    in side brwser  and external  way means code editor
+
+   
+                                    /**** Section 2  👉 values and variables in JavaScript ****/
+
+
+// var myName = 'tarun kale';    
+    
+ //// var =varible(key)    myName => Name      tarun kale =>value    
+            // :imp: so it is the combination of varible  name  and value
+
+            //or
+
+//💯 value => tarun kale    , ,,,,   varible (key) or container => myName
+
+
+
+
+
+// var myAge = 24;
+
+// console.log(myAge);                                   //   imp 👿         myAge  +> name of varibale  come in camel case
+
+
+                  //====================================================      NAMEING VARIBEL  RULES        
+                                // THE FIRST CHRACTER MUST BE LETER  (NORAMLY APAN  JO LIKHTE HAI)  OR AN UNDERSCORE(_)  OR DOLLAR($) . ESKE  ALWA KUCH NAHI
+                                                                   
+                                              //  ⤵️ work example 
+                                                // var _myName
+                                                // var $myName
+                                                // var myName
+
+
+                                               
+                                              //   ⤵️ not work example 
+                                                    // var 2name="tarun"
+                                                    // console.log(2name)    // 👿 not work 
+
+                             // 😈 imp hai ki bich varible name  space use nahi kr sakte ahi
+                              // expmale       
+                              //   var my Name                                
+                              //   var _my Name                                
+                              //   var $my Name                                
+                                 /// ⚔️  not do that  this is is wrong
+
+                                 // 👿  case sesitive    uppercase  and lower case 
+
+                                 // you canot use reserved key word of javascript haere var is reserved word so you canot use like this
+                                 //   var var ="tarun"   worng
+
+
+
+// Naming Practice
+// var _myName = "vinod";    //  IT WORK
+// var 1myName = "thapa";      // NOT WORK
+// var _1my__Name = "bahadur";    // IT WORK
+// var $myName = "thapa technical";   //  WORK
+// var myNaem% = "thapa technical";     // NOT WORK  (IT USE SPECIAL CHARACTER)
+
+// console.log(myNaem%);
+
+
+//===============================================================================================$
+                                                                                                   /**** Section 4👉 Data Types in JavaScript ****/
+
+undefined:   typeof instance==="undefined"
+     boolean:   typeof instance==="boolean"
+     Number:   typeof instance==="number"
+     String:   typeof instance==="string"
+     Bigint :typeof instance ==="bigint "
+     symbol :typeof instance ==="symbol"
+
+
+//  var myName = "tarun";
+//  console.log(myName);
+//    console.log(typeof(myName))     // ◀️ it say it string
+
+//  var myAge = 26;
+//  console.log(myAge);
+//  console.log(typeof(myAge))        //   ◀️ i  i say number
+
+// var iAmtarun = false;
+// console.log(iAmtarun);
+// console.log(typeof(iAmtarun));          //◀️ i  i say boolean
+
+
+
+
+
+// DataTypes Practice
+
+console.log( 10 + "20");                  //  ◀️  it show 1020   cascade from
+console.log(typeof(10+"20"))            // it type  string
+console.log( 9 - "5");                     // 🆕 👿 imp  it is the problem (bug ) of js many interview ask this basic question  beacuse it result is 4    
+ console.log(typeof(9-'5'))                   // 👿 it give number AS its type how it is possible becuse we do number - string= number so this is the bug   🎃  arre yaar  simple ki numbeer ke form answer aaa raha hai means type number hoga naa
+
+
+console.log( "Java "+ "Script");    // it result javascript
+//" " + " "
+console.log( " " + 0);                   // first space then 0  like thiss   ====   0
+//" " + 0
+console.log("tarun" - "kale")     //   // 🆕 👿 imp  it is the problem (bug ) of js many interview ask this basic question becuae it give NAN
+
+console.log(typeof("tarun"-"kale"))      //  😆  it give me number    it type thats ridiculous so here it  IS also  ANOTHER bug of js
+
+
+
+                                   //      TRUE =>1   AND     FASLE=>0                  REMEMBER THAT
+ 
+true + true    
+console.log(true + true  ) //it result 2                                                
+true + false
+ console.log(false + true) // it result 1
+false - true  // result   -1
+
+
+
+
+                                                            // null vs undefined  (intervieew question)
+
+                                        //   IN COLLEAGE TIME 
+                  var myPocket=null
+                  console.log(myPocket)  // it give nulll value 
+                  console.log(typeof(myPocket))  // it give  OBJECT i dont know  why  may be it is also a bug(global)
+
+                    // after 8 year 
+                     
+                    var myPocket=         // i dont know
+                    console.log(myPocket)  // it is undefined (it print nothing)
+                    console.log(typeof(myPocket))  //  if i  write double cord mypocket =""   it print string and  if  i write nothing  it is undefined  its type of   
+                  
+                       
+                                                                                           // 👍 NAN
+                          // nan is a property of the global object 
+                          // in other words , it is a variable in global scope 
+                          // the initial value of nan is not-a-number
+
+                                                                 example 
+
+                                                                 var myNunmber=8989096553
+                                                                 var myName ="tarunkale"
+
+                                                                 console.log(isNaN(myNunmber))   // it is false
+                                                                 console.log(isNaN(myName))   // it is true
+
+
+                                                               // NaN Practice 🤯
+
+  👿👿👿👿 NAN  ka type is an object ok and object ke under kuch bhi aa skta hai function ,nested object ,numbeer ,string etc
+
+// NaN === NaN;          false      ====> why beacuse not a number means number ke alwa kuuch bhi ho sakta hai object, string,boolean dono jaraui nahi hai  ki same ho that why in defination me bola global property
+
+
+// Number.NaN === NaN;            false ==> same bidu ==> number ke under  NaN(not a number)  jo equality dectator with value  vo bhi NaN ke sath 
+                                                                    //   number ke under koi bhi number nahi hai (eske alwaa kuch bhi ho sakt hai object,string) ===NaN
+
+// isNaN(NaN);         ==> true
+
+// isNaN(Number.NaN);   ==> true
+// Number.isNaN(NaN); ==> true
+
+                                                                           
+
+                                                                                  //  :art:  Expression and opertor
+
+                                                                                //  5,6,809 any number=operand
+                                                                                 
+                                                                                //  +,-,*/ ==>opertor
+
+                                                                                //  expresion  is combination opernad and opertor
+
+
+                                     //  🥇 TYPE               
+                                    //  assignment  opertor   =
+                                    //  arithmathic opeertor +,-,/ etc
+                                    //  comparison opertor   ===,==
+                                    //  logical opertor    || and &&
+                                    //  string opertor       
+                                    //  conditional  (ternary ) operator
+
+                                    // 1️⃣Assignment operators
+// An assignment operator assigns a value to its left operand 
+// based on the value of its right operand. 
+// The simple assignment operator is equal (=)
+
+// var x = 5; 
+// var y = 5;
+
+// console.log("is both the x and y are equal or not" + x == y );
+
+// In es6
+// console.log(`Is both the x and y are equal : ${x == y}`);
+
+
+                                     // 2️⃣Arithmetic operators
+// An arithmetic operator takes numerical values 
+// (either literals or variables) as their operands and 
+// returns a single numerical value.
+
+// console.log(3+3);
+// console.log(10-5);
+// console.log(20/5);
+// console.log(5*6);
+
+// console.log("Remainder Operator " + 27%4);  answer ======>>>>> 1
+                             // % module opertor
+
+
+                             // Postfix increment operator means the expression is evaluated 
+// first using the original value of the variable and then the 
+// variable is incremented(increased).
+
+
+// If used prefix, with operator before operand (for example, ++x), 
+// the increment operator increments and returns the value after incrementing.
+
+// var num = 15;
+// var newNum = --num + 5; 
+// console.log(num);
+// console.log(newNum);
+
+              // frist arithematic(+,-) then retrun (print)                              
+
+// Prefix increment operator means the variable is incremented first and then 
+// the expression is evaluated using the new value of the variable.
+
+
+                      //      postfix example
+// var num=345
+//                         var newNum= num--+0
+//                         console.log(newNum)  result 345
+//                           console.log(num)    result 344
+
+
+                                   //means first print(retrun) then decrease
+
+
+
+
+
+
+
+// 3️⃣Comparison operators
+// A comparison operator compares its operands and 
+// returns a logical value based on whether the comparison is true.
+
+// var a = 30;
+// var b = 10;
+
+// Equal (==)
+// console.log(a == b);
+
+// Not equal (!=)
+// console.log(a != b);
+
+// // Greater than (>)
+// console.log(a > b);
+
+// // Greater than or equal (>=)
+// console.log(a >= b);
+
+// // Less than (<)
+// console.log(a < b);
+
+// // Less than or equal (<=)
+// console.log(a <= b);
+
+
+
+
+
+
+
+
+// 4️⃣ Logical operators
+// Logical operators are typically used with Boolean (logical) values; 
+// when they are, they return a Boolean value.
+
+// var a = 30;
+// var b = -20;
+
+// Logical AND (&&)
+// The logical AND (&&) operator (logical conjunction) for a set of 
+// operands is true if and only if all of its operands are true.
+
+
+// console.log(a > b && b > -50 && b < 0);
+
+
+// Logical OR (||)
+// The logical OR (||) operator (logical disjunction) for a set of 
+// operands is true if and only if one or more of its operands is true.
+
+// console.log((a < b) || (b > 0) || (b > 0));
+
+// Logical NOT (!)
+// The logical NOT (!) operator (logical complement, negation) 
+// takes truth to falsity and vice versa.
+
+// console.log(!((a>0) || (b<0)));
+// console.log(!true);
+
+
+// 5️⃣ String Concatenation(operators)
+// The concatenation operator (+) concatenates two string values together, 
+// returning another string that is the union of the two operand strings.
+
+
+// console.log("Hello World");
+
+// console.log("hello " +  "world");
+
+// var myName = "vinod";
+
+// console.log(myName + " tarun");
+// console.log(myName + " kale");
+// console.log(myName + " tarun kale ");
+
+// 😳 4 Challenge Time 
+// What will be the output of 3**3? 
+// What will be the output, when we add a number and a string?
+// Write a program to swap two numbers?
+// Write a program to swap two numbers without using third variable?
+
+
+
+// sol 1: ✔
+// console.log(9**2); // 9*9
+// console.log(10 ** -1); 1/10
+
+
+// sol 2:  ✔
+// console.log(5 + "tha");
+
+// sol 3: ✔ 
+
+// var a = 5;
+// var b = 10;
+
+// output b=5; a=10
+
+// var c = b; //c = 10
+// b = a; // b = 5;
+// a = c;
+
+// console.log("the value of a is " + a);
+// console.log("the value of b is " + b);
+
+
+// sol 4: ✔
+
+// var a = 5;
+// var b = 10;
+
+// // output b=5; a=10
+
+// a = a + b; // a = 15
+// b = a - b; // b = 5; 
+// a = a - b; // a = 10;
+
+// console.log("the value of a is " + a);
+// console.log("the value of b is " + b);
+
+
+
+
+// 🙋‍👨‍🏫 Interview Question 4 🙋‍👨‍🏫
+// What is the Difference between == vs === ?
+
+
+// sol 
+// var num1 = 5;
+// var num2 = '5';
+
+// console.log(typeof(num1));
+// console.log(typeof(num2));
+
+// console.log(num1 == num2 );
+
+// var num1 = 5;
+// var num2 = '5';
+
+// console.log(typeof(num1));
+// console.log(typeof(num2));
+// console.log(num2);
+
+// console.log(num1 === num2 );
+
+
+Advantages of External JavaScript
+There will be following benefits if a user creates an external javascript:
+
+
+make js file and  write  not inside script tag just direct write
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Paragraph changed.";
+}
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Demo External JavaScript</h2>
+
+<p id="demo">A Paragraph.</p>
+
+<button type="button" onclick="myFunction()">Try it</button>
+
+<p>This example links to "myScript.js".</p>
+<p>(myFunction is stored in "myScript.js")</p>
+
+<script src="myScript.js"></script>
+
+</body>
+</html>
+
+
+It helps in the reusability of code in more than one HTML file.
+It allows easy code readability.
+It is time-efficient as web browsers cache the external js files, which further reduces the page loading time.
+It enables both web designers and coders to work with html and js files parallelly and separately, i.e., without facing any code conflictions.
+The length of the code reduces as only we need to specify the location of the js file.
+Disadvantages of External JavaScript
+There are the following disadvantages of external files:
+
+The stealer may download the coder's code using the url of the js file.
+If two js files are dependent on one another, then a failure in one file may affect the execution of the other dependent file.
+The web browser needs to make an additional http request to get the js code.
+A tiny to a large change in the js code may cause unexpected results in all its dependent files.
+We need to check each file that depends on the commonly created external javascript file.
+If it is a few lines of code, then better to implement the internal javascript code.
+
+JavaScript Comment
+JavaScript comments
+Advantage of javaScript comments
+Single-line and Multi-line comments
+The JavaScript comments are meaningful way to deliver message. It is used to add information about the code, warnings or suggestions so that end user can easily interpret the code.
+
+The JavaScript comment is ignored by the JavaScript engine i.e. embedded in the browser.
+
+Advantages of JavaScript comments
+There are mainly two advantages of JavaScript comments.
+
+To make code easy to understand It can be used to elaborate the code so that end user can easily understand the code.
+To avoid the unnecessary code It can also be used to avoid the code being executed. Sometimes, we add the code to perform some action. But after sometime, there may be need to disable the code. In such case, it is better to use comments.
+Types of JavaScript Comments
+There are two types of comments in JavaScript.
+
+Single-line Comment
+Multi-line Comment
+avaScript Single line Comment
+It is represented by double forward slashes (//). It can be used before and after the statement.
+
+Let’s see the example of single-line comment i.e. added before the statement.
+
+<script>  
+// It is single line comment  
+document.write("hello javascript");  
+</script>  
+
+<html>
+<body>
+<script>  
+// It is single line comment  
+document.write("hello javascript");  
+</script>
+</body>
+</html>
+
+
+         </script>
+</body>
+</html>

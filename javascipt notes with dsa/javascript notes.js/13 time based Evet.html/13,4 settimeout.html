@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center; margin-top: 15%;text-transform: capitalize;">clik to see time out events 👨‍🎨</h1>
+    <p id="tarun" style="text-align: center;text-transform: capitalize;color: red;"></p>
+    <button style="display: block; margin: auto;margin-top: 1%;" id="btn">Button Text</button>
+
+
+    <script>
+const ok=document.getElementById("btn")
+
+const timeout=()=>{
+        document.getElementById("tarun").innerHTML="wait for 1 min....... 🚩"   // for good UI
+
+       setTimeout(()=>{
+           document.getElementById("tarun").innerHTML="hello tarun"
+       },1000)
+}
+
+
+ok.addEventListener('click',timeout)
+     
+
+
+    </script>
+</body>
+</html>

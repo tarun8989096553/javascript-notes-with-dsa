@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div style="display: flex; flex-direction: column;">
+        <div style="background-color: red; height: 100px; width:200px" id="tarun ">simple inline alert()</div> </div>
+
+    <script>
+               // add evetlisnere ko acchee se dekh
+
+               let tarun=document.getElementById("tarun")
+
+               const call =()=>{
+                console.log(event)// yeh sabh kuch show kr dega      // it show that ki koi bhi websit pe gai  kisi link pe clik kiya hume kese pata cahlega ki konsi link pe klick kiya to event.target bataega vese event puri detail bubling capturing and type onclik ,onload   but here show click  allthat stuf
+                console.log(event.target) // link konsi ahi
+                console.log(event.type)// click hai type 
+               }
+
+               tarun.addEventListener(("click",call))
+
+
+               
+
+
+    </script>
+</body>
+</html>
